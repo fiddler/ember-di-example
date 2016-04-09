@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Dashboard</h2>
+  <p>A nice dashboard full of widgets.</p>
+  {{#each model as |widget|}}
+  {{di-widget title=widget.title value=widget.value}}
+  {{else}}
+  <p>No widgets. Create them {{#link-to 'add'}}here{{/link-to}}.</p>
+  {{/each}}
+</div>

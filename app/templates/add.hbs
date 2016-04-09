@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Add a widget</h3>
+      <form {{action "saveWidget" on="submit"}}>
+        <div class="form-group">
+          <label for="title">Widget title</label>
+          {{input value=title type="text" name="title" class="form-control" placeholder="Title..."}}
+        </div>
+        <div class="form-group">
+          <label for="value">Widget value</label>
+          {{input value=value type="text" name="value" class="form-control" placeholder="Title..."}}
+        </div>
+        <button type="submit" class="btn btn-default">Add widget</button>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <h3>Preview</h3>
+      {{di-widget title=title value=value}}
+    </div>
+  </div>
+</div>
